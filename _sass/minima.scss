@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen|Baumans|Bitter|Righteous|Leckerli+One|Itim|Cabin+Sketch:400,700);
+
+$base-font-family: 'Oxygen', sans-serif;  //"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 300 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+$title-font: Baumans;
+$post-title-font: Baumans;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #E65C2E;  // #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #00b38f;   //#2a7ae2 !default;
+
+$grey-color:        #ff7547; //#828282 !default;
+$grey-color-light: lighten($grey-color, 35%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+$link-hover-color: #C41F57; 
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
+header h1 { 
+	text-align:left;
+	padding-left:0px;
+	letter-spacing:0px;
+	line-height:0.8em;
+	font-weight:bold;
+	font-family: "Oxygen","sans-serif";
+}
+
+
+body {
+	//height:100%;
+	//margin:0px auto;
+	padding:0;
+/*	background:#ffe0b2  ;*/
+	background: white; //beige;
+	font-family: 'Oxygen', 'sans-serif';
+	font-size: 1.0em;
+	color: #E65C2E; //black;
+ 
+}
+
+footer {
+       // font-family: Bitter;
+       bottom: 0;
+       height: 80px; 
+       padding: 0 0 80px;
+       //position: absolute;
+       background: beige;//$brand-color;
+       width: 100%;
+
+}
