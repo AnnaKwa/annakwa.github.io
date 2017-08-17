@@ -26,6 +26,7 @@ github_username:  AnnaKwa
 
 # Build settings
 markdown: kramdown
+auto_ids: true
 #theme: minima
 plugins:
   - jekyll-feed
